@@ -93,7 +93,7 @@ section {
     height: auto;
 }
 
-.books>div{
+.books figure {
     text-align: center;
     padding: 10%;
 }

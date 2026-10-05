@@ -126,3 +126,45 @@ footer{
     font-style: italic;
 
 }
+
+@media (max-width: 480px) {
+
+nav{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px 0px;
+    line-height: 30px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: #d8d6ca;
+    z-index: 1000;
+    color: #d8d6ca;
+    float: none;
+}
+
+nav a {
+    color: black;
+    padding: 10px 20px;
+}
+#wrapper {
+    margin-top: 500px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    float: none;
+    line-height: 150%;
+}
+
+main {
+    text-align: justify;
+}
+    .books {
+        grid-template-columns: auto auto;
+        gap: 16px;
+    }
+}

@@ -331,8 +331,7 @@ footer a {
 /*END OF THE DESTOKP IMAGE GRID*/
 
 .social a:hover {
-  color: lightgrey;
-  font-size: 30px;
+  color: rgb(191, 255, 0);
 }
 
 .social p {
@@ -355,13 +354,13 @@ footer a {
   text-align: center;
   /* Add 20px of vertical padding and no horizontal padding */
   padding: 20px 0;
-  color: gray;
+  color: rgb(191, 255, 0);
 }
 
-.social.fa {
+.social .fa {
   font-size: 3em;
   padding: 8px;
-  color: rgb(191, 255, 0);
+  color: gray;
 }
 
 .icon-wrapper {
@@ -376,11 +375,12 @@ footer a {
 }
 
 .fa {
-  font-size: 6em;
+  font-size: 30px;
+  color: gray;
 }
 
 .fa:hover {
-  color: lightgray;
+  color: rgb(191, 255, 0);
 }
 
 .credits {

@@ -510,4 +510,91 @@ footer a {
   nav a {
     color: white;
   }
+
+  /* MOBILE CONTENT WRAPPER */
+
+  #wrapper {
+    margin-top: 500px;
+    position: relative;
+    width: 90%;
+
+    /* Center the wrapper and reset its top margin to zero*/
+
+    margin: 0 auto;
+
+    /* Prevent the wrapper from the floating to one to another*/
+    float: none;
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 12px;
+  }
+
+  /* TWO COLUMN MOBILE IMAGE GRID*/
+
+  .pict {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    grid-auto-flow: row;
+    align-items: start;
+  }
+
+  /* The special character ^ is called a caret. In CSS, when used inside an attribute selector, it means "starts width".active^=
+ - means the attribute*/
+  .pict figure,
+  .pict [class^="im"] {
+    grid-column: auto;
+    grid-row: auto;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Make images fit inside of thei column */
+
+  .pict.img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  /* Prevent hover effects from creating horizontal overflow*/
+
+  .pict figure:hover img,
+  .pict.im:hover {
+    transform: none;
+  }
+
+  /* Keep hover text inside the image*/
+
+  .pict .hover-text {
+    max-width: calc(100% - 20px);
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  /* Apply on smaller screens */
+  @media (max-width: 600px) {
+    .pict {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 5px;
+    }
+  }
 }

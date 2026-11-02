@@ -8,6 +8,95 @@ body {
   margin: 0;
 }
 
+/* =====================================================
+   2. IMAGE HOVER EFFECTS
+   ===================================================== */
+
+/* Position each figure so text can appear over its image. */
+.pict figure {
+  position: relative;
+  /* Create a positioning reference for child elements. */
+
+  display: inline-block;
+  /* Allow figures to sit alongside one another. */
+
+  cursor: pointer;
+  /* Show a hand cursor when hovering over the figure. */
+}
+
+/* Make images fill the available width. */
+.pict img {
+  width: 100%;
+  /* Use the full width of the image container. */
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  /* Animate zoom and transparency changes over 0.3 seconds. */
+}
+
+/* Hide the text until the image is hovered over. */
+.hover-text {
+  display: none;
+  /* Hide the text by default. */
+
+  position: absolute;
+  /* Allow the text to sit on top of the image. */
+
+  bottom: 30px;
+  /* Place the text 30px above the bottom edge. */
+
+  left: 10px;
+  /* Place the text 10px from the left edge. */
+
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Use a black background with 70% opacity. */
+
+  color: white;
+  /* Make the text white. */
+
+  padding: 8px;
+  /* Add space inside the text box. */
+
+  border-radius: 4px;
+  /* Slightly round the box corners. */
+
+  white-space: nowrap;
+  /* Keep the text on one line. */
+}
+
+/* Reveal the text when the figure is hovered over. */
+.pict figure:hover .hover-text {
+  display: block;
+  /* Change the text from hidden to visible. */
+}
+
+/* Enlarge and slightly fade images on hover. */
+.pict figure:hover img {
+  transform: scale(1.05);
+  /* Increase the image size by 5%. */
+
+  opacity: 0.9;
+  /* Make the image slightly transparent. */
+}
+
+/* Apply a blur and zoom effect to images with class "im". */
+.im:hover {
+  filter: blur(2px);
+  /* Add a small blur of 2 pixels. */
+
+  opacity: 0.9;
+  /* Reduce the opacity slightly. */
+
+  transform: scale(1.05);
+  /* Enlarge the image by 5%. */
+
+  transition: all 0.3s ease-in-out;
+  /* Animate property changes over 0.3 seconds.
+       For smooth transitions in both directions, it is
+       usually better to put this in the normal .im rule. */
+}
+
 .menu1 {
   display: flex;
   background: white;

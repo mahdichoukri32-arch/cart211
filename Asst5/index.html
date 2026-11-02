@@ -362,38 +362,35 @@
     </div>
 
     <script>
-      <!--JavaScript:
-      Makes the mobile hamburger muenu opan and close.
-      JS adds or removes a CSS class.
-      The CSS decides what the menu looks like when that class is present/activate.-->
+      //JavaScript:
+      //   Makes the mobile hamburger muenu opan and close.
+      //   JS adds or removes a CSS class.
+      //   The CSS decides what the menu looks like when that class is present/activate.
 
-      document.addEventListener('DOMContentLoaded',
-      ()=> {
-          //Find the Hamburger button inside the mobile menu container
-          const hamburgerButton = document.
-          querySelector('.hamburger-menu button')
+      document.addEventListener("DOMContentLoaded", () => {
+        //Find the Hamburger button inside the mobile menu container
+        const hamburgerButton = document.querySelector(
+          ".hamburger-menu button",
+        );
 
-          //Find the X button used to close the Navigation menu
-          const closeButton = document.querySelector
-          ('.close-menu');
+        //Find the X button used to close the Navigation menu
+        const closeButton = document.querySelector(".close-menu");
 
-          //Find the container holding the Nav links
-          const menu1 = document.querySelector('.menu1')
+        //Find the container holding the Nav links
+        const menu1 = document.querySelector(".menu1");
 
-          // When the hamburger menu is clicked, add the class "menu-deployed" to the Nav  menu.
-          // NavThe CSS uses this class to make the menu visible.
+        // When the hamburger menu is clicked, add the class "menu-deployed" to the Nav  menu.
+        // NavThe CSS uses this class to make the menu visible.
 
-          hamburgerButton.addEventListener('click',
-              () => {
-                  menu1.classList.add('menu-deployed');
-              });
+        hamburgerButton.addEventListener("click", () => {
+          menu1.classList.add("menu-deployed");
+        });
 
-              //When th X button is clicked, remvoe the "menu-deployed" so the new menu closes
+        //When th X button is clicked, remvoe the "menu-deployed" so the new menu closes
 
-              closeButton.addEventListener('click', () =>
-              {
-              menu1.classList.remove('menu-deployed')  ;
-              });
+        closeButton.addEventListener("click", () => {
+          menu1.classList.remove("menu-deployed");
+        });
       });
     </script>
   </body>

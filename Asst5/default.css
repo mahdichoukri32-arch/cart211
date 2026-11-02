@@ -19,6 +19,40 @@ body {
   display: block;
 }
 
+/* Hide the hamburger menu by default on desktop*/
+.hamburger-menu {
+  display: none;
+
+  /* The mobile media query will display it*/
+  align-items: center;
+
+  /* vertically center its contents when using Flexbox*/
+  justify-content: center;
+  /* horizontally center its contents*/
+}
+
+.hamburger-menu button {
+  background: none;
+
+  /* removes the default BG for the button*/
+  border: none;
+  font-size: 2em;
+  color: grayè;
+}
+
+.hamburger-menu button .fa-bars {
+  cursor: pointer;
+}
+
+.close-menu {
+  display: none;
+}
+
+.stories_title {
+  text-align: right;
+  font-size: 3em;
+}
+
 /*MAIN CONTENT AND HEADINGS*/
 
 #wrapper {
@@ -46,6 +80,14 @@ h2 {
   font-size: 2em;
   margin-bottom: 1em;
   text-align: justify;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 20px;
+  color: darkgray;
 }
 
 /* NAVIGATION BAR */
@@ -115,6 +157,31 @@ footer a {
   color: black;
 }
 
+/* Story Page Layout*/
+
+/* Left coloumn of the story page*/
+
+.left_stories {
+  /* Span five grid columns. from line 1 to 6*/
+  grid-column: 1 / 6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Right column containing the story text*/
+.stories {
+  grid-column: 7 / 13;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.stories p {
+  margin-top: 0;
+}
+
+/* DESKTOP IMAGE GRID*/
 .pict {
   display: grid;
   /* Creates 12 equally sized columns*/

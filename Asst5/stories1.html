@@ -27,9 +27,9 @@
 
     <!-- The Dimensions and alternative description of the preview -->
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:width" content="630" />
+    <meta property="og:image:height" content="630" />
     <meta
-      property="og:image:width"
+      property="og:image:alt"
       content="Potrait associated with the American Pageant story"
     />
 
@@ -57,10 +57,10 @@
     <link rel="stylesheet" href="default.css" />
 
     <!--Loads Google Fonts for use in the CSS-->
-    <link rel="preconnect" href="https://font.googleleapis.com" />
+    <link rel="preconnect" href="https://font.googleapis.com" />
     <link rel="preconnect" href="https://font.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleleapis.com/css2?family=Inter:ital,opzs,wgh@0,14..32,100..900,1,14..32,100..900&family=Roboto:itial,wght@0,100..900,1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,400;0,900;1,100;1,900&display=swap"
       rel="stylesheet"
     />
 
@@ -82,6 +82,29 @@
               <img src="assets/logo.png" alt="Logo" width="110" height="50" />
             </a>
           </div>
+
+          <div class="menu1">
+            <!-- The X button closes the mobile navigation menu-->
+            <button
+              type="button"
+              class="close-menu"
+              aria-label="Close Navigation Menu"
+            >
+              &times;
+            </button>
+
+            <a href="storie1.html">STORIES</a>
+            <a href="#">SERIES</a>
+            <a href="index.html">ABOUT</a>
+          </div>
+
+          <!-- Hamburger button: display on mobile and tablet screens-->
+          <div class="hamburger-menu">
+            <button type="button" aria-label="Open Navigation Menu">
+              <!-- Font Awesome: displays on mobile and tablet screen-->
+              <span class="fa fa-bars" arial-hidden="true"></span>
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -92,12 +115,7 @@
 
           <div class="pitch">
             <figure class="left_stories">
-              <img
-                src="assets/america_pageant.jpg"
-                width="1200px"
-                height="790px"
-                class="im"
-              />
+              <img src="assets/america_pageant.jpg" class="im" />
             </figure>
 
             <div class="stories">
@@ -148,10 +166,34 @@
         <div class="social">
           <!--Social Medi Links. Font Awesome uses class names to display to each icon
         The # links are placeholders and should be replaced with real profile URL's-->
-          <div class="icons-wrapper">
-            <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
-            <a href="#" class="fa fa-youtube" aria-label="Youtube"></a>
-            <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
+          <div class="icon-wrapper">
+            <a href="#" class="social-icons facebook" aria-label="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+
+            <a href="#" class="social-icons instagram" aria-label="Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+
+            <a href="#" class="social-icons twitter" aria-label="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+
+            <a href="#" class="social-icons tiktok" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="#" class="social-icons youtube" aria-label="YouTube">
+              <i class="fa fa-youtube"></i>
+            </a>
+
+            <a href="#" class="social-icons linkedin" aria-label="LinkedIn">
+              <i class="fa fa-linkedin"></i>
+            </a>
+
+            <a href="#" class="social-icons github" aria-label="GitHub">
+              <i class="fa fa-github"></i>
+            </a>
           </div>
 
           <div class="credits">
@@ -170,7 +212,6 @@
          Makes the mobile hamburger muenu opan and close.
          JS adds or removes a CSS class.
       The CSS decides what the menu looks like when that class is present/activate.-->
-
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         //Find the Hamburger button inside the mobile menu container

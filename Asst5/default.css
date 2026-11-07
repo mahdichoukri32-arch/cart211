@@ -238,7 +238,7 @@ footer {
   font-size: 10px;
   font-weight: lighter;
   text-align: right;
-  font-size: italic;
+  font-style: italic;
 }
 
 footer a {
@@ -247,6 +247,12 @@ footer a {
 }
 
 /* Story Page Layout*/
+
+.pitch {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
 
 /* Left coloumn of the story page*/
 
@@ -274,7 +280,7 @@ footer a {
 .pict {
   display: grid;
   /* Creates 12 equally sized columns*/
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   gap: 15px;
   margin: 0;
   padding: 0;
@@ -419,63 +425,118 @@ footer a {
 
 /*END OF THE DESTOKP IMAGE GRID*/
 
-.social a:hover {
-  color: rgb(191, 255, 0);
-}
-
-.social p {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  color: gray;
-  text-align: center;
-  /* Use 80% of the inherited font size*/
-  font-size: 0.8em;
-}
-
 /* SOCIAL ICON CONTAINER */
 
-.social {
+.social-icons {
   display: flex;
-  /* Stack the children vertically */
-  flex-direction: column;
-  /* Stack the children horizontally */
+  /* Arrange icons in a row. */
+
+  justify-content: center;
+  /* Center the icons horizontally. */
   align-items: center;
-  text-align: center;
-  /* Add 20px of vertical padding and no horizontal padding */
-  padding: 20px 0;
-  color: rgb(191, 255, 0);
+
+  flex-wrap: wrap;
+  /* Allow icons to move onto another line when needed. */
+
+  gap: 10px;
+  /* Add 10px between the icons. */
+
+  width: 100%;
+  /* Fill the available container width. */
 }
 
-.social .fa {
-  font-size: 3em;
-  padding: 8px;
-  color: gray;
-}
-
-.icon-wrapper {
-  /* arrange icons in a row */
+/* Common icon styles */
+.social {
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  /* allows the icons to move to another line when needed */
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 100%;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+
+  border-radius: 50%;
+  /* Adds a smooth animation when the icon's transform or shadow changes */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  /* transform: Animates movement, rotation, or scaling over 0.3 seconds */
+  /* box-shadow: Smoothly animates changes to the icon's shadow over 0.3 seconds */
+  /* ease: Makes the animation start slowly, speed up, and then slow down */
 }
 
-.fa {
-  font-size: 30px;
-  color: gray;
+/* Individual brand colors */
+.facebook {
+  background: #1877f2;
 }
 
-.fa:hover {
-  color: rgb(191, 255, 0);
+.instagram {
+  /* Sets the gradient direction to 45 degrees */
+  background: linear-gradient(
+    45deg,
+    /* Sets the gradient direction to 45 degrees */ #feda75,
+    /* Yellow */ #fa7e1e,
+    /* Orange */ #d62976,
+    /* Pink */ #962fbf,
+    /* Purple */ #4f5bd5 /* Blue */
+  );
 }
+
+.twitter {
+  background: #000000;
+}
+
+.tiktok {
+  background: #111111;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
+
+.github {
+  background: #24292f;
+}
+
+/* Hover effects */
+/* Applies these styles when the user moves the mouse over a social media icon */
+.social:hover {
+  /* Moves the icon upward by 6px and enlarges it by 8% */
+  transform: translateY(-6px) scale(1.08);
+
+  /* Adds a soft shadow beneath the icon to create a floating effect */
+  /* Values: horizontal offset, vertical offset, blur radius, and shadow color */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyboard accessibility */
+/* Applies these styles when the icon is focused using keyboard navigation, such as the Tab key */
+.social:focus-visible {
+  /* Adds a 3px light-blue outline around the icon to indicate keyboard focus */
+  outline: 3px solid #38bdf8;
+
+  /* Adds 5px of space between the outline and the icon */
+  outline-offset: 5px;
+}
+
+/* credits */
 
 .credits {
   margin-top: 10px;
+  /* Add space above the credits. */
+
   font-size: 1em;
+  /* Use the inherited font size. */
+
   width: 100%;
+  /* Allow the credits to fill the available width. */
 }
 
 /* Responsive  Design*/
@@ -654,7 +715,7 @@ footer a {
 
   /* Make images fit inside of thei column */
 
-  .pict.img {
+  .pict img {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -667,7 +728,7 @@ footer a {
   /* Prevent hover effects from creating horizontal overflow*/
 
   .pict figure:hover img,
-  .pict.im:hover {
+  .pict .im:hover {
     transform: none;
   }
 
@@ -686,20 +747,21 @@ footer a {
       gap: 5px;
     }
   }
-}
 
-/*  MOBILE STORY LAYOUT */
-.left_stories {
-  grid-column: 1 / 3;
-  margin: 0;
-  padding: 0;
-}
+  /*  MOBILE STORY LAYOUT */
+  .left_stories {
+    grid-column: 1 / 3;
+    margin: 0;
+    padding: 0;
+  }
 
-.stories {
-  grid-column: 1 / 3;
-  margin: 0;
-  font-size: 1.2 em;
-  line-height: 1.5 em;
+  .stories {
+    grid-column: 1 / 3;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
 }
 
 /* MOBILE BOOK GRID */

@@ -7,7 +7,6 @@
     <meta
       name="description"
       content="A Human of New York Story - A Course exercice(cart211_ exploring semantic HTML, CSS Grid, and Mobile queries)"
-      .
     />
 
     <!--Open Graph metadata - controls how the page looks when shared on social media-->
@@ -57,10 +56,14 @@
     <link rel="stylesheet" href="default.css" />
 
     <!--Loads Google Fonts for use in the CSS-->
-    <link rel="preconnect" href="https://font.googleapis.com" />
-    <link rel="preconnect" href="https://font.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,400;0,900;1,100;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Radley&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap"
       rel="stylesheet"
     />
 
@@ -93,8 +96,8 @@
               &times;
             </button>
 
-            <a href="storie1.html">STORIES</a>
-            <a href="#">SERIES</a>
+            <a href="stories1.html">STORIES</a>
+            <a href="index.html">SERIES</a>
             <a href="index.html">ABOUT</a>
           </div>
 
@@ -102,7 +105,7 @@
           <div class="hamburger-menu">
             <button type="button" aria-label="Open Navigation Menu">
               <!-- Font Awesome: displays on mobile and tablet screen-->
-              <span class="fa fa-bars" arial-hidden="true"></span>
+              <span class="fa fa-bars" aria-hidden="true"></span>
             </button>
           </div>
         </nav>
@@ -111,97 +114,103 @@
       <section>
         <article>
           <h1>Human Of New York</h1>
-          <h2 class="stories_title">America Pageant</h2>
+          <h2 class="stories_title">American Pageant</h2>
 
           <div class="pitch">
-            <figure class="left_stories">
-              <img src="assets/america_pageant.jpg" class="im" />
-            </figure>
-
-            <div class="stories">
-              <p>
-                I was seventeen. Only child, not a lot of friends. But I had a
-                plan. I was going to become an actress, get a role on All My
-                Children, meet my husband on set– and when that was all over,
-                I’d host a talk show. Kelly Ripa did it; I could do it too. Back
-                then it seemed like every woman on television had gotten their
-                start as beauty queen. So my senior year I decided to enter my
-                school’s Homecoming Queen competition. It was organized like a
-                Ms. America pageant. But this was a rough high school, only one
-                other girl signed up, so I had a good shot. My whole family got
-                behind me. My mom was a seamstress. We noticed that in most
-                pageants we watched, the winner wore a white dress. So she sewed
-                me a white dress that I picked out of Seventeen Magazine. First
-                came the interview portion, and that’s when the trouble started.
-                The judges asked me about the Anita Hill testimony; I wasn’t
-                ready for that. I was ready for world peace. They were supposed
-                to ask me about my goals, so I could say world peace. But that
-                didn’t happen. The talent portion was later that night at the
-                homecoming dance. The whole school was there. I chose a Sheena
-                Easton song; poor choice. Not the right crowd for that. The
-                other girl chose ‘I Feel Good’ by Stephanie Mills, and she had
-                the whole crowd singing along. That’s when I knew it was over.
-                But then, a miracle. The guidance counselor quieted everyone
-                down, and announced the winner: it was me. Me! It was my Kelly
-                Kapowski moment. Everyone was cheering, the other girl
-                congratulated me. But it only lasted five seconds, because the
-                guidance counselor said: ‘Wait a second, I’m sorry. Joanna is
-                the runner-up.’ It was the worst moment of my life. In fact, the
-                only thing that got me through COVID was knowing that it could
-                not possibly, possibly be worse than that moment. And here’s a
-                twist for you. Remember that guidance counselor? Several years
-                later I ended up acting alongside his son in a play at Queens
-                College. In one scene I pulled a gun on him, and the director
-                was like: ‘We need more anger. Think about something that makes
-                you angry.’ I was like: ‘Well, that’s easy. His father ruined my
-                senior year. And quite possibly, my entire life.
-              </p>
+            <div class="left_stories">
+              <img
+                src="assets/america_pageant.jpg"
+                class="im"
+                alt="Portrait of the woman featured in American Pageant"
+              />
             </div>
+
+            <details class="story-accordion" open>
+              <summary>Read the story</summary>
+
+              <div class="stories">
+                <p>
+                  I was seventeen. Only child, not a lot of friends. But I had a
+                  plan. I was going to become an actress, get a role on All My
+                  Children, meet my husband on set– and when that was all over,
+                  I’d host a talk show. Kelly Ripa did it; I could do it too.
+                  Back then it seemed like every woman on television had gotten
+                  their start as beauty queen. So my senior year I decided to
+                  enter my school’s Homecoming Queen competition. It was
+                  organized like a Ms. America pageant. But this was a rough
+                  high school, only one other girl signed up, so I had a good
+                  shot. My whole family got behind me. My mom was a seamstress.
+                  We noticed that in most pageants we watched, the winner wore a
+                  white dress. So she sewed me a white dress that I picked out
+                  of Seventeen Magazine. First came the interview portion, and
+                  that’s when the trouble started. The judges asked me about the
+                  Anita Hill testimony; I wasn’t ready for that. I was ready for
+                  world peace. They were supposed to ask me about my goals, so I
+                  could say world peace. But that didn’t happen. The talent
+                  portion was later that night at the homecoming dance. The
+                  whole school was there. I chose a Sheena Easton song; poor
+                  choice. Not the right crowd for that. The other girl chose ‘I
+                  Feel Good’ by Stephanie Mills, and she had the whole crowd
+                  singing along. That’s when I knew it was over. But then, a
+                  miracle. The guidance counselor quieted everyone down, and
+                  announced the winner: it was me. Me! It was my Kelly Kapowski
+                  moment. Everyone was cheering, the other girl congratulated
+                  me. But it only lasted five seconds, because the guidance
+                  counselor said: ‘Wait a second, I’m sorry. Joanna is the
+                  runner-up.’ It was the worst moment of my life. In fact, the
+                  only thing that got me through COVID was knowing that it could
+                  not possibly, possibly be worse than that moment. And here’s a
+                  twist for you. Remember that guidance counselor? Several years
+                  later I ended up acting alongside his son in a play at Queens
+                  College. In one scene I pulled a gun on him, and the director
+                  was like: ‘We need more anger. Think about something that
+                  makes you angry.’ I was like: ‘Well, that’s easy. His father
+                  ruined my senior year. And quite possibly, my entire life.
+                </p>
+              </div>
+            </details>
           </div>
         </article>
       </section>
 
       <footer>
         <!--Groups the social icons and credits together-->
-        <div class="social-icons">
-          <!--Social Medi Links. Font Awesome uses class names to display to each icon
+        <!--Social Medi Links. Font Awesome uses class names to display to each icon
         The # links are placeholders and should be replaced with real profile URL's-->
-          <div class="social-icons">
-            <a href="#" class="social facebook" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
+        <div class="social-icons">
+          <a href="#" class="social facebook" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
 
-            <a href="#" class="social instagram" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
+          <a href="#" class="social instagram" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
 
-            <a href="#" class="social twitter" aria-label="X">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
+          <a href="#" class="social twitter" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
 
-            <a href="#" class="social tiktok" aria-label="TikTok">
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
+          <a href="#" class="social tiktok" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
 
-            <a href="#" class="social youtube" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
+          <a href="#" class="social youtube" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
 
-            <a href="#" class="social linkedin" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
+          <a href="#" class="social linkedin" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
 
-            <a href="#" class="social github" aria-label="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
+          <a href="#" class="social github" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
 
-          <div class="credits">
-            <p>
-              Mariam-Choukri Mahdi, cart 211, 2026,credits:
-              humansofnyarchive.com
-            </p>
-          </div>
+        <div class="credits">
+          <p>
+            Mariam-Choukri Mahdi, cart 211, 2026,credits: humansofnyarchive.com
+          </p>
         </div>
       </footer>
 
@@ -237,6 +246,24 @@
         closeButton.addEventListener("click", () => {
           menu1.classList.remove("menu-deployed");
         });
+
+        const storyAccordion = document.querySelector(".story-accordion");
+
+        if (storyAccordion) {
+          const mobileScreen = window.matchMedia("(max-width: 1024px)");
+
+          function updateAccordion() {
+            if (mobileScreen.matches) {
+              storyAccordion.removeAttribute("open");
+            } else {
+              storyAccordion.setAttribute("open", "");
+            }
+          }
+
+          updateAccordion();
+
+          mobileScreen.addEventListener("change", updateAccordion);
+        }
       });
     </script>
   </body>

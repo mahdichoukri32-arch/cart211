@@ -84,7 +84,7 @@ body {
   border-radius: 4px;
   /* Slightly round the box corners. */
 
-  transform: scale(1.05);
+  transform: none;
   /* Increase the image size by 5%. */
 
   /*opacity: 0.9;*/
@@ -100,6 +100,10 @@ body {
   /* Animate property changes over 0.3 seconds.
        For smooth transitions in both directions, it is
        usually better to put this in the normal .im rule. */
+}
+
+.pict .im:hover {
+  transform: none;
 }
 
 .menu1 {
@@ -311,7 +315,7 @@ footer a {
   overflow-x: auto;
   gap: 15px;
   margin: 0;
-  padding: 0 0 20px 0;
+  padding: 8px 5px 20px 0;
 }
 
 .pict figure {

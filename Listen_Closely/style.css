@@ -40,7 +40,7 @@ body {
 .phone:hover,
 .computer:hover {
   cursor:
-    url("image/Cursor.png") 0 0,
+    url("image/Close_eye.png") 0 0,
     crosshair;
 }
 

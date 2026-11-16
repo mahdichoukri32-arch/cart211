@@ -110,7 +110,7 @@
           </div>
         </nav>
       </header>
-
+      <!--The only stories of my website-->
       <section>
         <article>
           <h1>Human Of New York</h1>
@@ -174,9 +174,10 @@
       </section>
 
       <footer>
-        <!--Groups the social icons and credits together-->
-        <!--Social Medi Links. Font Awesome uses class names to display to each icon
-        The # links are placeholders and should be replaced with real profile URL's-->
+        <!-- IMAGE GALLERY:
+The pict class uses Flexbox to arrange 14 portraits in a horizontal scrollable gallery.
+Each figure contains an image, a link, and a caption displayed on hover.
+-->
         <div class="social-icons">
           <a href="#" class="social facebook" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
@@ -206,7 +207,7 @@
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
-
+        <!--The source of my information and the presentation of me-->
         <div class="credits">
           <p>
             Mariam-Choukri Mahdi, cart 211, 2026,credits: humansofnyarchive.com
@@ -241,7 +242,7 @@
           menu1.classList.add("menu-deployed");
         });
 
-        //When th X button is clicked, remvoe the "menu-deployed" so the new menu closes
+        //When the X button is clicked, remvoe the "menu-deployed" so the new menu closes
 
         closeButton.addEventListener("click", () => {
           menu1.classList.remove("menu-deployed");

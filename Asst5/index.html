@@ -78,6 +78,7 @@
     />
   </head>
 
+  <!--The logo of my website link-->
   <body>
     <div id="wrapper">
       <header>
@@ -113,6 +114,7 @@
         </nav>
       </header>
 
+      <!--The presentation of the website-->
       <section>
         <article>
           <h1>Humans Of New York</h1>
@@ -129,10 +131,10 @@
             the lives of strangers on the streets of New York City.
           </p>
 
-          <!--IMAGE GALLERY: 
-        The pict class creates the CSS GRID Layout. Each figure is one gallery item.
-        Classes im1 through im14 let CSS position images at differet sizes to create an asymetricsal collage.
-    -->
+          <!-- IMAGE GALLERY:
+The pict class uses Flexbox to arrange 14 portraits in a horizontal scrollable gallery.
+Each figure contains an image, a link, and a caption displayed on hover.
+-->
           <div class="gallery-container">
             <button class="arrow left-arrow" aria-label="Previous potraits">
               &#10094;
@@ -141,7 +143,7 @@
             <div class="pict">
               <!--Figure 1: image, link, and caption-->
 
-              <figure class="im1">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/america_pageant.jpg"
@@ -155,7 +157,7 @@
 
               <!--Figure 2: image, link, and caption-->
 
-              <figure class="im2">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/end_of_life_patient.jpg"
@@ -170,7 +172,7 @@
 
               <!--Figure 3: image, link, and caption-->
 
-              <figure class="im3">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/Chipwich_guy.jpg"
@@ -184,7 +186,7 @@
 
               <!--Figure 4: image, link, and caption-->
 
-              <figure class="im4">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/fake_sport.jpg"
@@ -199,7 +201,7 @@
 
               <!--Figure 5: image, link, and caption-->
 
-              <figure class="im5">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/gettin_married.jpg"
@@ -214,7 +216,7 @@
 
               <!--Figure 6: image, link, and caption-->
 
-              <figure class="im6">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/homework.jpg"
@@ -229,7 +231,7 @@
 
               <!--Figure 7: image, link, and caption-->
 
-              <figure class="im7">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/invisibility.jpg"
@@ -244,7 +246,7 @@
 
               <!--Figure 8: image, link, and caption-->
 
-              <figure class="im8">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/Right_and_wrong.jpg"
@@ -259,7 +261,7 @@
 
               <!--Figure 9: image, link, and caption-->
 
-              <figure class="im9">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/sketchbook.jpg"
@@ -274,7 +276,7 @@
 
               <!--Figure 10: image, link, and caption-->
 
-              <figure class="im10">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/the_algorithm.jpg"
@@ -289,7 +291,7 @@
 
               <!--Figure 11: image, link, and caption-->
 
-              <figure class="im11">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/The_Empire.jpg"
@@ -304,7 +306,7 @@
 
               <!--Figure 11: image, link, and caption-->
 
-              <figure class="im12">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/Mardi-Gras.jpg"
@@ -319,7 +321,7 @@
 
               <!--Figure 13: image, link, and caption-->
 
-              <figure class="im13">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/they_loved_me.jpg"
@@ -334,7 +336,7 @@
 
               <!--Figure 14: image, link, and caption-->
 
-              <figure class="im14">
+              <figure>
                 <a href="stories1.html">
                   <img
                     src="assets/exhausting_to_me.jpg"
@@ -362,72 +364,70 @@
       <footer>
         <!--Groups the social icons and credits together-->
         <div class="social-icons">
-          <!--Social Medi Links. Font Awesome uses class names to display to each icon
-        The # links are placeholders and should be replaced with real profile URL's-->
-          <div class="social-icons">
-            <a
-              href="https://www.facebook.com/humansofnewyork/"
-              class="social facebook"
-              aria-label="Facebook"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
+          <!--Social Media Links. Font Awesome uses class names to display to each icon
+        The links are placeholders and have been replaced by the profile of human of new york social media presence.-->
+          <a
+            href="https://www.facebook.com/humansofnewyork/"
+            class="social facebook"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
 
-            <a
-              href="https://www.instagram.com/humansofny/"
-              class="social instagram"
-              aria-label="Instagram"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
+          <a
+            href="https://www.instagram.com/humansofny/"
+            class="social instagram"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
 
-            <a
-              href="https://x.com/humansofny"
-              class="social twitter"
-              aria-label="X"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
+          <a
+            href="https://x.com/humansofny"
+            class="social twitter"
+            aria-label="X"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
 
-            <a
-              href="https://www.tiktok.com/@humansofny"
-              class="social tiktok"
-              aria-label="TikTok"
-            >
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
+          <a
+            href="https://www.tiktok.com/@humansofny"
+            class="social tiktok"
+            aria-label="TikTok"
+          >
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
 
-            <a
-              href="https://www.youtube.com/user/humansofny"
-              class="social youtube"
-              aria-label="YouTube"
-            >
-              <i class="fa-brands fa-youtube"></i>
-            </a>
+          <a
+            href="https://www.youtube.com/user/humansofny"
+            class="social youtube"
+            aria-label="YouTube"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
 
-            <a
-              href="https://www.linkedin.com/pulse/humans-new-york-creator-brandon-stanton-andrew-murfett-benbc/"
-              class="social linkedin"
-              aria-label="LinkedIn"
-            >
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
+          <a
+            href="https://www.linkedin.com/pulse/humans-new-york-creator-brandon-stanton-andrew-murfett-benbc/"
+            class="social linkedin"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
 
-            <a
-              href="https://github.com/human-nyc"
-              class="social github"
-              aria-label="GitHub"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
+          <a
+            href="https://github.com/human-nyc"
+            class="social github"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
 
-          <div class="credits">
-            <p>
-              Mariam-Choukri Mahdi, cart 211, 2026,credits:
-              humansofnyarchive.com
-            </p>
-          </div>
+        <!--The source of my information and the presentation of me-->
+        <div class="credits">
+          <p>
+            Mariam-Choukri Mahdi, cart 211, 2026,credits: humansofnyarchive.com
+          </p>
         </div>
       </footer>
 

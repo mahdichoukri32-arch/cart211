@@ -11,6 +11,68 @@ body {
     crosshair;
 }
 
+.restaurant-list {
+  height: 300px;
+  overflow-y: auto;
+  scrollbar-color: rgb(185, 19, 114) rgb(255, 0, 81);
+  scrollbar-width: thin;
+}
+
+.scroll-hint {
+  color: rgb(255, 0, 81);
+  font-family: "Tiny5", serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.delivery-content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  background-color: rgb(1, 11, 19);
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(77, 255, 237);
+  font-family: "Tiny5", serif;
+}
+
+.restaurant {
+  background: rgb(1, 22, 39);
+  border: 2px solid rgb(1, 41, 74);
+  color: white;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.restaurant h3 {
+  margin-top: 8px;
+}
+
+.limited-offer {
+  color: rgb(255, 0, 34);
+  font-weight: bold;
+}
+
+.dialogue {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 60%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+
+  background-color: rgb(77, 255, 237, 0.9);
+  border: 3px solid rgb(68, 224, 209);
+  color: rgb(255, 0, 81);
+  font-family: "Tiny5", serif;
+}
+
 .pixel-button {
   /*Position*/
 

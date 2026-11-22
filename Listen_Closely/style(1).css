@@ -48,6 +48,8 @@ body {
   box-shadow: 5px 5px 0 rgb(216, 2, 102);
 }
 .pixel-button {
+  display: none;
+
   /*Position*/
 
   position: absolute;

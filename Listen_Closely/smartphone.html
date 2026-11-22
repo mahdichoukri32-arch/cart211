@@ -37,10 +37,6 @@
     />
   </head>
   <body>
-    <!-- Go to delivery App -->
-    <a href="delivery.html" class="pixel-button" id="continue-button"
-      >CLICK TO CONTINUE</a
-    >
     <div class="dialogue">
       <p id="dialogue-text">
         It's 11 a.m. I've been working for six hours now. Damn, I'm so hungry.
@@ -48,6 +44,18 @@
 
       <button id="next-button">NEXT</button>
     </div>
+
+    <!-- Go to delivery App -->
+    <div id="delivery-app">
+      <button id="pixel-button">OPEN APP</button>
+    </div>
+
+    <!--Image widget for the home page-->
+    <img
+      id="photo-widget"
+      src="image/Party.png"
+      alt="my friends are celebrating my birthday"
+    />
     <script>
       let dialogues = [
         "It's 11 a.m. I've been working for six hours now. Damn, I'm so hungry.",
@@ -60,16 +68,36 @@
       let dialogueText = document.getElementById("dialogue-text");
       let nextButton = document.getElementById("next-button");
       let continueButton = document.getElementById("continue-button");
+      let photoWidget = document.getElementById("photo-widget");
+      let deliveryApp = document.getElementById("delivery-app");
+      let OpenAppButton = document.getElementById("pixel-button");
 
       nextButton.addEventListener("click", function () {
         if (dialogueIndex < dialogues.length - 1) {
           dialogueIndex++;
           dialogueText.textContent = dialogues[dialogueIndex];
+          // Show the smartphone home page
+          if (dialogueIndex === 1) {
+            document.body.style.backgroundImage =
+              'url("image/Smartphone_Home_Page.png")';
+            photoWidget.style.display = "block";
+          }
+          // Show the delivery app icon
+          if (dialogueIndex === 2) {
+            document.body.style.backgroundImage =
+              'url("image/Smartphone_Home_Page_Delivery App.png")';
+
+            photoWidget.style.display = "none";
+
+            deliveryApp.style.display = "block";
+          }
         }
         if (dialogueIndex === dialogues.length - 1) {
           nextButton.style.display = "none";
-          continueButton.style.display = "block";
         }
+      });
+      OpenAppButton.addEventListener("click", function () {
+        window.location.href = "delivery.html";
       });
     </script>
   </body>

@@ -1,6 +1,6 @@
 /* Main page background*/
 body {
-  background-image: url("image/Delivery\ app.png");
+  background-image: url("image/Smartphone_Delivery_App.png");
   background-color: #000;
   background-position: center center;
   background-repeat: no-repeat;
@@ -15,10 +15,14 @@ body {
 /* Scrollable restaurant list*/
 
 .restaurant-list {
-  height: 300px;
+  width: 100%;
+  height: 380px;
   overflow-y: auto;
-  scrollbar-color: rgb(185, 19, 114) rgb(255, 0, 81);
+  overflow-x: hidden;
+  box-sizing: border-box;
+
   scrollbar-width: thin;
+  scrollbar-color: #ff0077 #001627;
 }
 
 /* Scroll instruction*/
@@ -35,9 +39,9 @@ body {
 .delivery-content {
   position: absolute;
   top: 20%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%);
-  width: 25%;
+  width: 30%;
   padding: 10px;
   box-sizing: border-box;
 

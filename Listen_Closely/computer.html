@@ -37,6 +37,50 @@
     />
   </head>
   <body>
-    <a href="search_engine.html" class="pixel-button">CLICK TO CONTINUE</a>
+    <div class="dialogue">
+      <p id="dialogue-text">
+        I've eaten well today. I'm ready to get back to work.
+      </p>
+
+      <button id="next-button">NEXT</button>
+    </div>
+
+    <div id="search-engine">
+      <button id="pixel-button" class="pixel-button">OPEN BROWSER</button>
+    </div>
+
+    <script>
+      let dialogues = [
+        "I've eaten well today. I'm ready to get back to work.",
+        "Wait a minute, I still have something to research for my project.",
+        "Let me open the browser. I don't think it'll take that long.",
+      ];
+
+      let dialogueIndex = 0;
+
+      let dialogueText = document.getElementById("dialogue-text");
+      let nextButton = document.getElementById("next-button");
+      let Broswer = document.getElementById("search-engine");
+      let OpenAppButton = document.getElementById("pixel-button");
+
+      nextButton.addEventListener("click", function () {
+        if (dialogueIndex < dialogues.length - 1) {
+          dialogueIndex++;
+          dialogueText.textContent = dialogues[dialogueIndex];
+          // Show the smartphone home page
+          if (dialogueIndex === 1) {
+            document.body.style.backgroundImage =
+              'url("image/Computer_Home_Page.png")';
+          }
+        }
+        if (dialogueIndex === dialogues.length - 1) {
+          nextButton.style.display = "none";
+          Broswer.style.display = "block";
+        }
+      });
+      OpenAppButton.addEventListener("click", function () {
+        window.location.href = "search_engine.html";
+      });
+    </script>
   </body>
 </html>

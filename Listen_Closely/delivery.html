@@ -38,6 +38,13 @@
   </head>
   <body>
     <!--Delivery app interface-->
+    <div id="delivery-home">
+      <h1>Crave it</h1>
+
+      <p>Would you like to order in?</p>
+      <button id="order-button">RESTAURANT LIST</button>
+    </div>
+
     <div class="delivery-content">
       <h2>What's nearby</h2>
 
@@ -49,30 +56,53 @@
         <div class="restaurant">
           <!--Pizzabolic-->
           <h3>Pizzabolic</h3>
+          <img id="restaurant-image" src="image/pizza.png" alt="pizza" />
           <p>New Brazilian Pizza to celebrate Mardi Gras!</p>
         </div>
 
         <!--Sichuan-->
         <div class="restaurant">
+          <img
+            id="restaurant-image"
+            src="image/orange-chicken.png"
+            alt="orange-chicken"
+          />
           <h3>Sichuan ❀</h3>
           <p>Try out our delicious and authentic orange chicken plate!!</p>
+          <img
+            id="restaurant-image"
+            src="image/orange-chicken.png"
+            alt="orange-chicken"
+          />
         </div>
 
         <!--Out-In-->
         <div class="restaurant">
           <h3>Out-In</h3>
+          <img
+            id="restaurant-image"
+            src="image/burger.png"
+            alt="orange-chicken"
+          />
           <p>Two burgers and nuggets — $13!</p>
           <p class="limited-offer">Offer will end in 30 minutes !!!</p>
         </div>
+
+        <!--Out In
+        <div class="restaurant">
+          <h3>Out-In</h3>
+          <p class="description">
+            Out-In has been founded in XXXX. It's classic burger gourmet from
+            XXXX. The burger are as open as the clien tummy to new horizion.
+          </p>-->
       </div>
     </div>
 
     <!-- Visual novel dialogue box-->
     <div class="dialogue">
-      <p id="dialogue-text">
-        Let's see what's nearby. Pizzabolic... I could really go for a good
-        slice, but not today.
-      </p>
+      <img id="game-eye" src="image/Cursor.png" alt="Eye icon" />
+
+      <p id="dialogue-text">Let's see what's nearby.</p>
 
       <!--Character's thoughts and NEXT button-->
       <button id="next-button">NEXT</button>
@@ -86,7 +116,8 @@
 
     <script>
       const dialogues = [
-        "Let's see what's nearby. Pizzabolic... I could really go for a good slice, but not today.",
+        "Let's see what's nearby.",
+        "Pizzabolic... I could really go for a good slice, but not today.",
         "Chinese takeout? I don't really like the orange chicken from this place.",
         "Oh! Burgers! And they have a great combo: two burgers and nuggets for $13.",
       ];
@@ -94,17 +125,25 @@
       let dialogueIndex = 0;
 
       const dialogueText = document.getElementById("dialogue-text");
+      const deliveryHome = document.getElementById("delivery-home");
       const nextButton = document.getElementById("next-button");
       const choices = document.getElementById("choices");
+
+      if (dialogueIndex === 0) {
+        deliveryHome.style.display = "flex";
+      }
 
       nextButton.addEventListener("click", function () {
         if (dialogueIndex < dialogues.length - 1) {
           dialogueIndex++;
           dialogueText.textContent = dialogues[dialogueIndex];
+          deliveryHome.style.display = "none";
         }
         if (dialogueIndex === dialogues.length - 1) {
           nextButton.style.display = "none";
           choices.style.display = "flex";
+          document.querySelector(".dialogue").classList.add("game-prompt");
+          deliveryHome.style.display = "none";
         }
       });
 
@@ -115,12 +154,16 @@
         dialogueText.textContent =
           "Maybe it's my lucky day. I'll order that right now. It should arrive in 30 minutes. \nIn the meantime, I still have a bag of nuts tucked away in the cupboard.";
         choices.style.display = "none";
+        deliveryHome.style.display = "none";
+        document.querySelector(".dialogue").classList.remove("game-prompt");
       });
 
       saveButton.addEventListener("click", function () {
         dialogueText.textContent =
           "Yeah, this seems a bit pricey, especially since the nugget portion only comes with three nuggets. \nMaybe I should just figure out what I can cook with what I have at home.";
         choices.style.display = "none";
+        deliveryHome.style.display = "none";
+        document.querySelector(".dialogue").classList.remove("game-prompt");
       });
     </script>
   </body>

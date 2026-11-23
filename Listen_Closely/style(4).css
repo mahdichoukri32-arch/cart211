@@ -157,6 +157,13 @@ body {
   white-space: pre-line;
 }
 
+.dialogue.game-prompt {
+  background-color: rgb(255, 0, 119);
+  border-color: rgb(216, 2, 102);
+  color: rgb(77, 255, 237);
+  text-align: center;
+}
+
 #next-button {
   background-color: rgb(255, 0, 119);
   color: rgb(0, 255, 213);

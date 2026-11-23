@@ -103,7 +103,9 @@
 
     <!-- Visual novel dialogue box-->
     <div class="dialogue">
-      <p id="dialogue-text">Okay, what was I looking for again?</p>
+      <p id="dialogue-text">
+        Okay, what was I looking for again? Let me open the search engine.
+      </p>
 
       <!--Character's thoughts and NEXT button-->
       <button id="next-button">NEXT</button>
@@ -118,7 +120,7 @@
     <!--Java Script code-->
     <script>
       const dialogues = [
-        "Okay, what was I looking for again?",
+        "Okay, what was I looking for again? Let me open the search engine.",
         "What are the most popular design patterns this summer?",
         "Oh! This website, The Fold Line, seems legitimate, but I want to make sure.",
         "Would you like AI to help you?",
@@ -141,6 +143,7 @@
         if (dialogueIndex === dialogues.length - 1) {
           nextButton.style.display = "none";
           choices.style.display = "flex";
+          document.querySelector(".dialogue").classList.add("game-prompt");
         }
       });
 
@@ -151,12 +154,14 @@
         dialogueText.textContent =
           "Let's see what the AI chatbot has to say about this website. \nApparently, the most popular patterns this year are polka dots, leopard prints, and fruit patterns.";
         choices.style.display = "none";
+        document.querySelector(".dialogue").classList.remove("game-prompt");
       });
 
       openButton.addEventListener("click", function () {
         dialogueText.textContent =
           "Yeah, I'll check it myself. \nI can see that polka dots are trending, especially in blue and brown colour palettes. \nNext, animal prints like leopard and fruit patterns seem to be making a comeback.";
         choices.style.display = "none";
+        document.querySelector(".dialogue").classList.remove("game-prompt");
       });
 
       searchStart.addEventListener("click", function () {

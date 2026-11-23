@@ -37,6 +37,132 @@
     />
   </head>
   <body>
-    <a href="home_page.html" class="pixel-button">CLICK TO VIEW THE WEBSITE</a>
+    <div class="broswer-content">
+      <!-- SCREEN 1: WATERWOLF HOME -->
+      <div id="browser-home">
+        <img src="image/Waterwolf.png" alt="Waterworlf logo" />
+
+        <h1>Waterworlf</h1>
+
+        <p>What are you searching for today?</p>
+
+        <button id="search-start">SEARCH</button>
+      </div>
+
+      <!-- SCREEN 2: SEARCH RESULTS -->
+
+      <div id="search-results">
+        <!--Waterwolf search engine-->
+
+        <h2>Waterwolf</h2>
+
+        <p class="scroll-hint">SCROLL ↓</p>
+
+        <div class="search-bar">
+          <span>Popular design patterns summer 2026</span>
+          <span>⌕</span>
+        </div>
+
+        <!--Research listings-->
+        <div class="research-list">
+          <!--FIRST RESULT-->
+          <div class="research">
+            <!--Esthétique-->
+            <h3>Esthétique</h3>
+            <p class="link">
+              https://www.esthétique.com/suitcase/design/aesthetic-suitcase-patterns-trends-2026
+            </p>
+            The Top 10 patterns design, you must know for the years XXXX
+          </div>
+
+          <!--SECOND RESULT-->
+          <!--The Fold Line-->
+          <div class="research">
+            <h3>The Fold Line</h3>
+            <p>Dolk Polta, Leopard stripes, what is trending this summer!</p>
+            <p class="link">
+              https://www.thefoldline.com/suitcase/design/aesthetic-suitcase-patterns-trends-2026
+            </p>
+          </div>
+
+          <!--THIRD RESULT-->
+          <!--Alexandra Query-->
+          <div class="research">
+            <h3>Alexandra Query</h3>
+            <p>The XXXX Trends To Look up for this season</p>
+            <p class="link">
+              https://www.thefoldline.com/suitcase/design/aesthetic-suitcase-patterns-trends-2026
+            </p>
+          </div>
+        </div>
+        <!-- END OF RESEARCH LIST -->
+      </div>
+      <!-- END OF SEARCH RESULTS -->
+    </div>
+    <!-- END OF BROWSER WINDOW -->
+
+    <!-- Visual novel dialogue box-->
+    <div class="dialogue">
+      <p id="dialogue-text">Okay, what was I looking for again?</p>
+
+      <!--Character's thoughts and NEXT button-->
+      <button id="next-button">NEXT</button>
+    </div>
+
+    <!--Character's thoughts and NEXT button-->
+    <div id="choices">
+      <button id="ai-button">LISTEN TO THE AI</button>
+      <button id="open-button">OPEN THE LINK</button>
+    </div>
+
+    <!--Java Script code-->
+    <script>
+      const dialogues = [
+        "Okay, what was I looking for again?",
+        "What are the most popular design patterns this summer?",
+        "Oh! This website, The Fold Line, seems legitimate, but I want to make sure.",
+        "Would you like AI to help you?",
+      ];
+
+      let dialogueIndex = 0;
+
+      const dialogueText = document.getElementById("dialogue-text");
+      const nextButton = document.getElementById("next-button");
+      const choices = document.getElementById("choices");
+      const browserHome = document.getElementById("browser-home");
+      const searchResults = document.getElementById("search-results");
+      const searchStart = document.getElementById("search-start");
+
+      nextButton.addEventListener("click", function () {
+        if (dialogueIndex < dialogues.length - 1) {
+          dialogueIndex++;
+          dialogueText.textContent = dialogues[dialogueIndex];
+        }
+        if (dialogueIndex === dialogues.length - 1) {
+          nextButton.style.display = "none";
+          choices.style.display = "flex";
+        }
+      });
+
+      const aiButton = document.getElementById("ai-button");
+      const openButton = document.getElementById("open-button");
+
+      aiButton.addEventListener("click", function () {
+        dialogueText.textContent =
+          "Let's see what the AI chatbot has to say about this website. \nApparently, the most popular patterns this year are polka dots, leopard prints, and fruit patterns.";
+        choices.style.display = "none";
+      });
+
+      openButton.addEventListener("click", function () {
+        dialogueText.textContent =
+          "Yeah, I'll check it myself. \nI can see that polka dots are trending, especially in blue and brown colour palettes. \nNext, animal prints like leopard and fruit patterns seem to be making a comeback.";
+        choices.style.display = "none";
+      });
+
+      searchStart.addEventListener("click", function () {
+        browserHome.style.display = "none";
+        searchResults.style.display = "block";
+      });
+    </script>
   </body>
 </html>

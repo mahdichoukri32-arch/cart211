@@ -83,45 +83,45 @@
       <button id="order-button">ORDER THIS COMBO</button>
       <button id="save-button">SAVE YOUR POCKET</button>
     </div>
+
+    <script>
+      const dialogues = [
+        "Let's see what's nearby. Pizzabolic... I could really go for a good slice, but not today.",
+        "Chinese takeout? I don't really like the orange chicken from this place.",
+        "Oh! Burgers! And they have a great combo: two burgers and nuggets for $13.",
+      ];
+
+      let dialogueIndex = 0;
+
+      const dialogueText = document.getElementById("dialogue-text");
+      const nextButton = document.getElementById("next-button");
+      const choices = document.getElementById("choices");
+
+      nextButton.addEventListener("click", function () {
+        if (dialogueIndex < dialogues.length - 1) {
+          dialogueIndex++;
+          dialogueText.textContent = dialogues[dialogueIndex];
+        }
+        if (dialogueIndex === dialogues.length - 1) {
+          nextButton.style.display = "none";
+          choices.style.display = "flex";
+        }
+      });
+
+      const orderButton = document.getElementById("order-button");
+      const saveButton = document.getElementById("save-button");
+
+      orderButton.addEventListener("click", function () {
+        dialogueText.textContent =
+          "Maybe it's my lucky day. I'll order that right now. It should arrive in 30 minutes. \nIn the meantime, I still have a bag of nuts tucked away in the cupboard.";
+        choices.style.display = "none";
+      });
+
+      saveButton.addEventListener("click", function () {
+        dialogueText.textContent =
+          "Yeah, this seems a bit pricey, especially since the nugget portion only comes with three nuggets. \nMaybe I should just figure out what I can cook with what I have at home.";
+        choices.style.display = "none";
+      });
+    </script>
   </body>
-
-  <script>
-    const dialogues = [
-      "Let's see what's nearby. Pizzabolic... I could really go for a good slice, but not today.",
-      "Chinese takeout? I don't really like the orange chicken from this place.",
-      "Oh! Burgers! And they have a great combo: two burgers and nuggets for $13.",
-    ];
-
-    let dialogueIndex = 0;
-
-    const dialogueText = document.getElementById("dialogue-text");
-    const nextButton = document.getElementById("next-button");
-    const choices = document.getElementById("choices");
-
-    nextButton.addEventListener("click", function () {
-      if (dialogueIndex < dialogues.length - 1) {
-        dialogueIndex++;
-        dialogueText.textContent = dialogues[dialogueIndex];
-      }
-      if (dialogueIndex === dialogues.length - 1) {
-        nextButton.style.display = "none";
-        choices.style.display = "flex";
-      }
-    });
-
-    const orderButton = document.getElementById("order-button");
-    const saveButton = document.getElementById("save-button");
-
-    orderButton.addEventListener("click", function () {
-      dialogueText.textContent =
-        "Maybe it's my lucky day. I'll order that right now. It should arrive in 30 minutes. \nIn the meantime, I still have a bag of nuts tucked away in the cupboard.";
-      choices.style.display = "none";
-    });
-
-    saveButton.addEventListener("click", function () {
-      dialogueText.textContent =
-        "Yeah, this seems a bit pricey, especially since the nugget portion only comes with three nuggets. \nMaybe I should just figure out what I can cook with what I have at home.";
-      choices.style.display = "none";
-    });
-  </script>
 </html>
